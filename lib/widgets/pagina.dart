@@ -25,14 +25,15 @@ class _StackHomeState extends State<StackHome> {
           IconButton(
             onPressed: null, 
             icon: Icon(Icons.keyboard_arrow_up),
-            iconSize: 40,color: 
-            Colors.black,
+            iconSize: 40,
+            color: Colors.black,
             ),
           IconButton(
             onPressed: null, 
             icon: Icon(Icons.keyboard_arrow_down),
-            iconSize: 40,color: 
-            Colors.black,),
+            iconSize: 40,
+            color: Colors.black,
+            ),
         ],
       ),
 
@@ -40,7 +41,7 @@ class _StackHomeState extends State<StackHome> {
         elevation: 4.0,
         child: Column(
           children: <Widget>[
-            Container(
+            SizedBox(
               height: 200,
               child: Ink.image(
                 image: cardImage,
@@ -48,13 +49,22 @@ class _StackHomeState extends State<StackHome> {
                ),
             ),
 
-            const ListTile(
+              const ListTile(
               title: Text(heading),
               subtitle: Text(subheading),
+              trailing: Column(
+               children: <Widget>[
+                Icon(Icons.shopping_bag),
+                Icon(Icons.favorite_outline)
+               ],      
+              ),
             ),
+
           ],
         ),
       ),
+
+      
     );
   }
 }
